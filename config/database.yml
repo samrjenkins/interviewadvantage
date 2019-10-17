@@ -49,6 +49,4 @@ test:
 #
 production:
   <<: *default
-  database: interviewadvantage_production
-  username: interviewadvantage
-  password: <%= ENV['INTERVIEWADVANTAGE_DATABASE_PASSWORD'] %>
+  database: ENV['CLEARDB_DATABASE_URL']
