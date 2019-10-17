@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_10_17_184921) do
 
-  create_table "clients", force: :cascade do |t|
+  create_table "clients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "first_name"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_10_17_184921) do
     t.string "photo"
   end
 
-  create_table "coaches", force: :cascade do |t|
+  create_table "coaches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
