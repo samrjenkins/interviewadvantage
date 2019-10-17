@@ -1,0 +1,163 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+  font-family: 'Raleway', sans-serif;
+ }
+
+ .navbar {
+  height: 5em;
+  display: flex;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+ }
+
+.navbar .background {
+  background-image: linear-gradient(to right, white, rgb(163,185,197));
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 2em;
+  color: white;
+}
+
+.page-content {
+  padding-top: 5em;
+}
+
+ h1 {
+  font-size: 3em;
+  font-weight: 400;
+  text-align: center;
+  margin: 1em;
+  color: #668b9f;
+ }
+
+.avatar {
+  border-radius: 50%;
+  width: 100%;
+  transition: 0.2s;
+  margin-bottom: 1em;
+}
+
+.avatar-lg {
+  width: 200px;
+}
+
+.client-cards {
+  margin-bottom: 5em;
+}
+
+.client-card {
+  text-align: center;
+  font-size: 1.3em;
+  color: #668b9f;
+  margin: 0em 0.5em 2em 0.5em;
+  position: relative;
+  display: block;
+}
+
+.client-card:hover .avatar {
+  transform: scale(1.05);
+}
+
+#client-search {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+input {
+  border-color: #668b9f;
+  border-width: 2px;
+  border-radius: 999px;
+  border-style: solid;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.nav-icon {
+  width: 40px;
+}
+
+label {
+  margin: 0;
+  cursor: pointer;
+}
+
+.nav-trigger input {
+  display: none;
+}
+
+.nav-icon:after,
+.nav-icon:before,
+.nav-icon div {
+  background-color: #fff;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  transition: all .2s ease-in-out;
+}
+
+.nav-trigger input:checked + .nav-icon:before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.nav-trigger input:checked + .nav-icon:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+.nav-trigger input:checked + .nav-icon div {
+  transform: scale(0);
+}
+
+.nav-dropdown {
+  background-color: rgba(232, 247, 255,0.9);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  padding: 0;
+}
+
+.dropdown-item {
+  padding: 1em 2em;
+  position: relative;
+}
+
+.dropdown-item a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-trigger input:checked ~ .nav-dropdown {
+  display: block;
+}

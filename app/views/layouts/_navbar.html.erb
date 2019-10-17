@@ -1,0 +1,31 @@
+<div class="navbar">
+  <%= link_to image_tag("interview-advantage-logo"), root_path %>
+  <div class="background">
+
+    <label class="nav-trigger">
+      <input type="checkbox">
+      <div class="nav-icon">
+        <div></div>
+      </div>
+      <ul class="nav-dropdown">
+        <li class="dropdown-item">
+          <%= link_to "", clients_path %>
+          All clients
+        </li>
+        <li class="dropdown-item">
+          <%= link_to "", new_client_path %>
+          Add client
+        </li>
+        <li class="dropdown-item">
+          <%= link_to "", destroy_coach_session_path, method: :delete %>
+          Sign out
+        </li>
+      </ul>
+    </label>
+
+  </div>
+</div>
+
+<script>
+
+</script>
